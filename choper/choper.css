@@ -1,0 +1,96 @@
+/* — RESET / ESTILOS BASE — */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  min-height: 100%;
+  background: #0c1116;
+  color: #eaeaea;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* — LAYOUT PRINCIPAL: header + contenido + footer — */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* — HEADER / TITULO — */
+header {
+  background: #1a2430;
+  padding: 30px 10px;
+  text-align: center;
+  border-bottom: 3px solid #3498a7;
+}
+header h1 {
+  color: #6dd7e8;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* — CONTENEDOR DE TARJETAS / ETAPAS — */
+section.padre {
+  flex: 1 0 auto; /* permite que el contenido empuje el footer cuando falte contenido */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+/* — TARJETA INDIVIDUAL — */
+.nieto {
+  background: #1e2c38;
+  width: 320px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  border-left: 5px solid #3498a7;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.nieto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.85);
+}
+
+.nieto h2 {
+  color: #4ecad4;
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+.nieto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.nieto ul {
+  padding-left: 18px;
+}
+
+.nieto ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #dcdcdc;
+}
+
+.nieto ul li::marker {
+  color: #3498a7;
+}
+
+/* — FOOTER (centrado y pegado al fondo) — */
+footer {
+  text-align: center;
+  padding: 18px 10px;
+  background: #1a2430;
+  color: #6dd7e8;
+  font-size: 0.95rem;
+  border-top: 2px solid #3498a7;
+  margin-top: auto; /* clave para sticky footer con flexbox */ 
+}

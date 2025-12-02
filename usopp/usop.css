@@ -1,0 +1,110 @@
+/* ---------------------- */
+/* RESET / ESTILOS BASE   */
+/* ---------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #0f1e26;
+  color: #eaeaea;
+}
+
+/* ---------------------- */
+/* LAYOUT GENERAL + FLEX/FLEX-COLUMN PARA STICKY FOOTER */
+/* ---------------------- */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------------------- */
+/* HEADER */
+/* ---------------------- */
+header {
+  background: #1a2430;
+  padding: 30px 10px;
+  text-align: center;
+  border-bottom: 3px solid #3997a5;
+}
+header h1 {
+  color: #6dd7e5;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px #0a1b22;
+}
+
+/* ---------------------- */
+/* SECCIÓN PRINCIPAL / TARJETAS */
+/* ---------------------- */
+section.padre {
+  flex: 1 0 auto; /* permite empujar footer abajo si hay poco contenido */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+/* ---------------------- */
+/* CADA TARJETA / ARTICLE (fase de Usopp) */
+/* ---------------------- */
+.nieto {
+  background: #1e2a36;
+  width: 320px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.6);
+  border-left: 5px solid #3997a5;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nieto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.8);
+}
+
+.nieto h2 {
+  color: #4ecad4;
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+}
+
+.nieto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.nieto ul {
+  padding-left: 20px;
+}
+
+.nieto ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #dcdcdc;
+}
+
+.nieto ul li::marker {
+  color: #3997a5;
+}
+
+/* ---------------------- */
+/* FOOTER (centrado al fondo) */
+/* ---------------------- */
+footer {
+  text-align: center;
+  padding: 18px 10px;
+  background: #1a2430;
+  color: #6dd7e5;
+  font-size: 0.95rem;
+  border-top: 2px solid #3997a5;
+  /* No necesita position fixed; se alinea al fondo por el flex layout */
+  margin-top: auto;
+}

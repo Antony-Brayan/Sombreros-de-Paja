@@ -1,0 +1,96 @@
+/* ===== RESET / ESTILOS BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  min-height: 100vh;
+  background: #0d1321;
+  color: #eaeaea;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== LAYOUT PRINCIPAL (HEADER + CONTENIDO + FOOTER) ===== */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #1a2432;
+  padding: 28px 15px;
+  text-align: center;
+  border-bottom: 3px solid #2f8fa8;
+}
+header h1 {
+  color: #70cfe8;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+
+/* ===== CONTENEDOR DE ETAPAS (TARJETAS) ===== */
+section.padre {
+  flex: 1 0 auto;  /* hace que contenido empuje el footer si hay poco contenido */  /* técnica sticky footer con flexbox */  :contentReference[oaicite:2]{index=2}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+/* ===== CADA TARJETA / ARTÍCULO ===== */
+.nieto {
+  background: #1e2f3b;
+  width: 320px;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  border-left: 5px solid #2f8fa8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nieto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.85);
+}
+
+.nieto h2 {
+  color: #56c7d9;
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+.nieto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.nieto ul {
+  padding-left: 18px;
+}
+
+.nieto ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #d8d8d8;
+}
+
+.nieto ul li::marker {
+  color: #2f8fa8;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 18px 10px;
+  background: #1a2432;
+  color: #70cfe8;
+  font-size: 0.95rem;
+  border-top: 2px solid #2f8fa8;
+  margin-top: auto;  /* clave para el sticky footer */  :contentReference[oaicite:3]{index=3}
+}
